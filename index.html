@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Malla Curricular</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fdf6f0;
+      color: #333;
+      margin: 40px;
+    }
+    h1 {
+      color: #d88ca4;
+    }
+    h2 {
+      color: #b86b82;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    .completed {
+      text-decoration: line-through;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+  <h1>Malla Curricular - Licenciatura en Comercialización</h1>
+
+  <h2>1er Año - Primer Cuatrimestre</h2>
+  <ul>
+    <li><input type="checkbox"> 01 - Taller de Introducción a la Economía y los Negocios | Correlativas: -</li>
+    <li><input type="checkbox"> 02 - Fundamentos de Marketing | Correlativas: -</li>
+    <li><input type="checkbox"> 03 - Administración General | Correlativas: -</li>
+    <li><input type="checkbox"> 04 - Introducción al Comercio Internacional | Correlativas: -</li>
+    <li><input type="checkbox"> 05 - Contabilidad General | Correlativas: -</li>
+  </ul>
+
+  <h2>1er Año - Segundo Cuatrimestre</h2>
+  <ul>
+    <li><input type="checkbox"> 06 - Principios de Economía | Correlativas: -</li>
+    <li><input type="checkbox"> 07 - Historia Económica y Social | Correlativas: -</li>
+    <li><input type="checkbox"> 08 - Matemática I | Correlativas: -</li>
+    <li><input type="checkbox"> 09 - Administración Estratégica | Correlativas: -</li>
+    <li><input type="checkbox"> 10 - Informática Aplicada | Correlativas: -</li>
+  </ul>
+
+  <h2>2do Año - Primer Cuatrimestre</h2>
+  <ul>
+    <li><input type="checkbox"> 11 - Problemática del Mundo Actual | Correlativas: -</li>
+    <li><input type="checkbox"> 12 - Matemática II | Correlativas: 08</li>
+    <li><input type="checkbox"> 13 - Inglés I | Correlativas: -</li>
+    <li><input type="checkbox"> 14 - Marco Legal de la Empresa | Correlativas: -</li>
+    <li><input type="checkbox"> 15 - Psicosociología de la Organización | Correlativas: -</li>
+  </ul>
+
+  <h2>2do Año - Segundo Cuatrimestre</h2>
+  <ul>
+    <li><input type="checkbox"> 16 - Negocios Digitales | Correlativas: 09</li>
+    <li><input type="checkbox"> 17 - Estadística | Correlativas: -</li>
+    <li><input type="checkbox"> 18 - Inglés II | Correlativas: 13</li>
+    <li><input type="checkbox"> 19 - Metodología de la Investigación | Correlativas: -</li>
+    <li><input type="checkbox"> 20 - Competencias Gerenciales | Correlativas: 03 15</li>
+    <li><input type="checkbox"> 21 - Taller de Integración | Correlativas: 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15</li>
+  </ul>
+
+  <h2>3er Año - Primer Cuatrimestre</h2>
+  <ul>
+    <li><input type="checkbox"> 22 - Comunicación Comercial | Correlativas: 02</li>
+    <li><input type="checkbox"> 23 - Política de Producto | Correlativas: 02</li>
+    <li><input type="checkbox"> 24 - Canales de Distribución | Correlativas: 02</li>
+    <li><input type="checkbox"> 25 - Comportamiento del Consumidor | Correlativas: 15</li>
+    <li><input type="checkbox"> 26 - Dirección de Ventas | Correlativas: 02</li>
+  </ul>
+
+  <h2>3er Año - Segundo Cuatrimestre</h2>
+  <ul>
+    <li><input type="checkbox"> 27 - Política de Precios | Correlativas: 02</li>
+    <li><input type="checkbox"> 28 - Investigación de Mercado | Correlativas: 15</li>
+    <li><input type="checkbox"> 29 - Costos | Correlativas: 05</li>
+    <li><input type="checkbox"> 30 - Marketing Digital | Correlativas: 16</li>
+    <li><input type="checkbox"> 31 - Seminario de Integración | Correlativas: 21 22 23 24 25 26</li>
+  </ul>
+
+  <h2>4to Año - Primer Cuatrimestre</h2>
+  <ul>
+    <li><input type="checkbox"> 32 - Administración Financiera | Correlativas: -</li>
+    <li><input type="checkbox"> 33 - Mercados Especiales I | Correlativas: 15</li>
+    <li><input type="checkbox"> 34 - Política de Negocios | Correlativas: 09</li>
+    <li><input type="checkbox"> 35 - Técnicas Cuantitativas | Correlativas: 17</li>
+    <li><input type="checkbox"> 36 - Taller de Trabajo Final | Correlativas: 19</li>
+  </ul>
+
+  <h2>4to Año - Segundo Cuatrimestre</h2>
+  <ul>
+    <li><input type="checkbox"> 37 - Mercados Especiales II | Correlativas: 15</li>
+    <li><input type="checkbox"> 38 - Planeamiento y Evaluación de Proyectos | Correlativas: 32 34</li>
+    <li><input type="checkbox"> 39 - Dirección Estratégica de Marketing | Correlativas: 20 34</li>
+    <li><input type="checkbox"> 40 - Seminario de Práctica Profesional | Correlativas: 31</li>
+    <li><input type="checkbox"> 41 - Trabajo Final | Correlativas: 36</li>
+    <li><input type="checkbox"> 42 - Experiencias Formativas Obligatorias de Carácter Electivo | Correlativas: -</li>
+  </ul>
+
+  <script>
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(cb => {
+      if (cb.checked) cb.parentElement.classList.add('completed');
+      cb.addEventListener('change', () => {
+        cb.parentElement.classList.toggle('completed', cb.checked);
+      });
+    });
+  </script>
+</body>
+</html>
